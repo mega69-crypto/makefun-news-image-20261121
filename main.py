@@ -219,12 +219,12 @@ def build():
         for line in head_lines[:2]:
             draw.text((px + 16, hy), line, font=f_head, fill=WHITE)
             hy += 36
-        # summary
+        # summary (line pitch 24 keeps three lines clear of the panel edge)
         sy = hy + 6
         sum_lines = wrap(draw, story["summary"], f_sum, inner)
         for line in sum_lines[:3]:
             draw.text((px + 16, sy), line, font=f_sum, fill=MUTED)
-            sy += 26
+            sy += 24
 
     # Ticker
     ty = gy + gh + 16
